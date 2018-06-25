@@ -1,0 +1,45 @@
+$footer-width: 60px;
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 60px;
+}
+.header {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 0.05rem solid $gray-200;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 3rem;
+  }
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-width;
+  line-height: $footer-width;
+  color: $gray-700;
+  border-top: 0.05rem solid $gray-200;
+}
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+  .footer {
+    max-width: 46rem;
+  }
+}
+@media screen and (min-width: 48em) {
+  .header {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

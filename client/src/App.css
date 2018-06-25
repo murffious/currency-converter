@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  background-image: url("assets/currency-world.jpg");
+  background-size: cover;
+  height: 120vh;
+}
