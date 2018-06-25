@@ -1,4 +1,5 @@
 ## Installation and how to use for local viewing and dev
+`git clone https://github.com/murffious/currency-converter.git`
 
 1. CURRENCY CONVERTER
 
