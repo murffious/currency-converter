@@ -23,3 +23,7 @@ Front end (works fine with out the server)
 TECH 
 React/Redux Front end with Material UI themed styles
 Node Mongo Google Passport Auth for Back end
+
+
+SCREEN SHOT of Front end UI 
+![image](https://user-images.githubusercontent.com/25558342/41877430-75dffc76-788e-11e8-8a19-f929d0b72b82.png)
