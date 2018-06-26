@@ -93,9 +93,6 @@ console.log("hello", res.data)
         var doc = new DOMParser().parseFromString(
             body
             ,'text/xml');   
-        //    console.log(doc.getElementsByTagName("Cube")[0].childNodes[0].nodeValue)
-          console.log(doc.getElementsByTagName("Cube")[10].attributes[0].value, Number(doc.getElementsByTagName("Cube")[10].attributes[1].value))
-// console.log(doc.getElementsByTagName("Cube"))
             var ratesObj = {};
             var str = doc.getElementsByTagName("Cube");
             for (let i = 2; i < 38; i++) {

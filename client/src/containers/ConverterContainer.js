@@ -20,11 +20,32 @@ class ConverterContainer extends Component {
   }
 
   componentDidMount() {
-    this.updateExchangeRates();
-    // Use this to update the rates every monring
-    setInterval(() => {
-      this.updateExchangeRates();
-    }, 100000000000);
+    // this.updateExchangeRates();
+    // // Use this to update the rates every monring
+    // setInterval(() => {
+    //   this.updateExchangeRates();
+    // }, 100000000000);
+    // experimental api call for fe
+    // const getXMLData = listdata => {
+    //   const parseData = new DOMParser().parseFromString(listdata, "text/xml");
+    //   const allVideoTitle = parseData.getElementsByTagName("title");
+    //   const allVideoId = parseData.getElementsByTagName("yt:videoId");
+    //   const allThumbnails = parseData.getElementsByTagName("media:thumbnail");
+    //   /* define a new array */
+    //   const finalArray = [];
+    //   /* push all items in one array */
+    //   for (const i = 0; i < allVideoId.length; i++) {
+    //     finalArray.push({
+    //       title: allVideoTitle[i].textContent,
+    //       id: allVideoId[i].textContent,
+    //       thumbnail: allThumbnails[i].getAttribute("url")
+    //     });
+    //   }
+    //   return finalArray;
+    // };
+    // fetch("http://localhost:5000/refresh-exchange-rates")
+    //   .then(Data => Data.text())
+    //   .then(DataText => this.setState({ videos: getXMLData(DataText) }));
   }
 
   render() {
