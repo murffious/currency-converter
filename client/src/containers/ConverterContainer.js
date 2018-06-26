@@ -47,6 +47,7 @@ class ConverterContainer extends Component {
     //   .then(Data => Data.text())
     //   .then(DataText => this.setState({ videos: getXMLData(DataText) }));
   }
+  git remote add heroku git@github.com:murffious/currency-converter.git
 
   render() {
     return (
