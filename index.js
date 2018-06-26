@@ -4,7 +4,7 @@ const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/dev');
 var cors = require('cors');
-
+var xmlparser = require('express-xml-bodyparser');
 require('./models/User');
 require('./services/passport');
 
@@ -23,7 +23,7 @@ app.use(
 app.use(cors())
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(xmlparser());
 // ROUTES
 require('./routes/authRoutes')(app);
 require('./routes/moneyRoutes')(app);

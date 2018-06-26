@@ -8,6 +8,7 @@ import { CURRENCIES, EXCHANGE_RATES } from "../../constants/Currencies";
 import axios from "axios";
 // import money from "../../containers/library";
 import fx from "money"; // import { fx } from 'money'
+import $ from "jquery";
 
 const initialState = {
   base: {

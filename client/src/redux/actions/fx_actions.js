@@ -1,5 +1,6 @@
 import * as types from "../../constants/ActionTypes";
 import fetch from "cross-fetch";
+import $ from "jquery";
 
 export const changeValue = (emitter, value) => ({
   type: types.CHANGE_VALUE,
@@ -23,25 +24,26 @@ export const changeInput = () => ({
   // emitter: emitter,
 });
 
-const getExchangeRates = (dispatch, baseCurrency, currencies) => {
-  // var url = `https://api.fixer.io/latest?base=${baseCurrency}&symbols=${currencies}`;
-  // return fetch(url)
-  //   .then(
-  //     response => response.json(),
-  //     error => console.log("An error occured.", error)
-  //   )
-  //   .then(json => dispatch(receiveExchangeRates(json)));
-  // const url = "http://localhost:5000/convert";
-  // return fetch(url)
-  //   .then(
-  //     response => console.log(response.body), //response.json(),
-  //     error => console.log("An error occured.", error)
-  //   )
-  //   .then(json => dispatch(receiveExchangeRates({ rates: json })));
-};
+// const getExchangeRates = (dispatch, baseCurrency, currencies) => {
+//   fetch("http://localhost:5000/refresh-exchange-rates")
+//     .then(
+//       response => response.json(),
+//       error => console.log("An error occured.", error)
+//     )
+//     .then(json => console.log(json));
+// };
 
+// export const updateExchangeRates = currencies => dispatch => {
+//   currencies.forEach(currency => {
+//     getExchangeRates(dispatch, currency, currencies);
+//   });
+// };
+// Making one solo function
 export const updateExchangeRates = currencies => dispatch => {
-  currencies.forEach(currency => {
-    getExchangeRates(dispatch, currency, currencies);
-  });
+  fetch("http://localhost:5000/refresh-exchange-rates")
+    .then(
+      response => response.json(),
+      error => console.log("An error occured.", error)
+    )
+    .then(json => dispatch(receiveExchangeRates(json)));
 };

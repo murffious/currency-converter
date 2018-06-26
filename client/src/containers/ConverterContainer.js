@@ -6,6 +6,7 @@ import AmountField from "../components/AmountField";
 import ExchangeRateDisplay from "../components/ExchangeRateDisplay";
 import * as Actions from "../redux/actions/fx_actions";
 import Card from "../components/Card";
+import $ from "jquery";
 
 class ConverterContainer extends Component {
   constructor(props) {
@@ -21,9 +22,9 @@ class ConverterContainer extends Component {
   componentDidMount() {
     this.updateExchangeRates();
     // Use this to update the rates every monring
-    //   setInterval(() => {
-    //     this.updateExchangeRates();
-    //   }, 100000);
+    setInterval(() => {
+      this.updateExchangeRates();
+    }, 100000000000);
   }
 
   render() {
